@@ -1,0 +1,72 @@
+[ACTIVITY_2_START]
+ACTIVITY 2 — Monte Carlo on FrozenLake
+Updated : 2026-05-14 19:20:40
+
+FrozenLake 4x4  (10,000 episodes):
+  final_win_rate_4x4  = 0.9920   (99.2% last 500 eps)
+  nonzero_q_4x4       = 35 / 64
+
+FrozenLake 8x8  (50,000 episodes):
+  final_win_rate_8x8  = 0.9780   (97.8% last 500 eps)
+  nonzero_q_8x8       = 150 / 256
+[ACTIVITY_2_END]
+
+[ACTIVITY_3_START]
+ACTIVITY 3 — Monte Carlo on Volcano
+Updated : 2026-05-14 19:26:07
+
+Training  (2,000,000 episodes):
+  training_time_s     = 201.1
+  final_win_rate      = 0.9230   (92.3% last 1000 eps)
+  nonzero_q           = 32 / 48
+
+Greedy eval (1000 eps, non-slippery):
+  view_rate           = 100.0%
+  goal_rate           = 0.0%
+  lava_rate           = 0.0%
+  timeout_rate        = 0.0%
+  mean_return         = 20.00
+[ACTIVITY_3_END]
+
+[ACTIVITY_4_START]
+ACTIVITY 4 — Monte Carlo on Taxi
+Updated : 2026-05-14 19:28:24
+
+Training  (200,000 episodes):
+  training_time_s       = 47.7
+  final_win_rate        = 1.0000   (100.0% last 2000 eps)
+
+Greedy eval (1000 eps, eps=0):
+  success_rate          = 1.0000   (100.0%)
+  mean_total_reward     = 7.59
+  mean_steps_per_ep     = 13.4
+  mean_steps_success    = 13.4
+  mean_illegal_actions  = 0.00
+
+Epsilon-decay comparison (30,000 eps each):
+  slow_decay_x0.9999_final_rate = 1.0000   (100.0%)
+  fast_decay_x0.999_final_rate  = 0.9100   (91.0%)
+[ACTIVITY_4_END]
+
+[ACTIVITY_5_START]
+ACTIVITY 5 — TD(0) on FrozenLake
+Updated : 2026-05-14 19:29:25
+
+TD(0) Training  (20,000 episodes):
+  training_time_s     = 4.3
+  final_win_rate      = 0.9800   (98.0% last 200 eps)
+  v_nonzero_entries   = 12 / 16
+
+Greedy eval (1000 eps, eps=0):
+  success_rate        = 1.0000   (100.0%)
+  mean_total_reward   = 1.000
+  mean_steps_success  = 6.0
+
+TD(0) vs MC comparison (same hyperparams, 20,000 eps each):
+  td_episodes_to_95pct  = 8132
+  mc_episodes_to_95pct  = 8921
+  td_final_rate         = 0.9800   (98.0% last 200 eps)
+  mc_final_rate         = 0.9900   (99.0% last 200 eps)
+  td_training_time_s    = 4.3
+  mc_training_time_s    = 1.5
+[ACTIVITY_5_END]
